@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "63c4",
+      "first": "s",
+      "last": "sd",
+      "email": "sd",
+      "password": "9f8412fb062cb50a2e88199c6978fc5ff8a03378",
+      "terms": true
+    },
+    {
+      "id": "a24b",
+      "first": "e",
+      "last": "e",
+      "email": "e",
+      "password": "be14be5e2477836b0037eaaa68f39238716954bb",
+      "terms": true
+    },
+    {
+      "id": "4b13",
+      "first": "r",
+      "last": "r",
+      "email": "r",
+      "password": "d55499e28a442ceadadd7e197b7351216bf5e032",
+      "terms": true
+    },
+    {
+      "id": "788d",
+      "first": "t",
+      "last": "t",
+      "email": "t",
+      "password": "5618e1a325ab7e93751b30595f895b2b14ba6f23",
+      "terms": true
+    },
+    {
+      "id": "79fe",
+      "first": "v",
+      "last": "v",
+      "email": "v",
+      "password": "4013a829ac4495aa90c88584085b98fb904e504e",
+      "terms": true
+    },
+    {
+      "id": "bf04",
+      "first": "osman",
+      "last": "yalman",
+      "email": "osman.yalman@gmail.com",
+      "password": "5eeacdd4fc6e7cb974589959efc1358036bcc895",
+      "terms": true
+    },
+    {
+      "id": "4446",
+      "first": "a",
+      "last": "a",
+      "email": "a",
+      "password": "92a0ea52e70aae648c4afd06dbed1cbe574d672c",
+      "terms": true
+    },
+    {
+      "id": "aecf",
+      "username": "em",
+      "fullname": "em",
+      "password": "4a3a263535e4b9405d9a0066a08a0190dada15c1"
+    }
+  ],
+  "repetition": [
+    {
+      "id": 1,
+      "number": 1
+    },
+    {
+      "id": 2,
+      "number": 2
+    },
+    {
+      "id": 3,
+      "number": 3
+    },
+    {
+      "id": 4,
+      "number": 4
+    },
+
+    {
+      "id": 5,
+      "number": 5
+    },
+    {
+      "id": 6,
+      "number": 6
+    }
+  ]
+}
