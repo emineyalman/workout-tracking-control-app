@@ -7,7 +7,8 @@ const secureLs = new SecureLS({ isCompression: false });
 export default createStore({
   state: {
     user: null,
-    saltKey: "signup1294380*?6*56"
+    saltKey: "signup1294380*?6*56",
+    schedule: [],
   },
   getters: {
     _saltKey: state => state.saltKey,
@@ -17,6 +18,9 @@ export default createStore({
       delete user?.password;
       return user;
     },
+    getSchedule(state) {
+      return state.schedule;
+    }
   },
   mutations: {
     setUser(state, user) {
@@ -24,9 +28,15 @@ export default createStore({
     },
     logoutUser(state) {
       state.user = null;
+    },
+    addToSchedule(state, newItem) {
+      state.schedule.push(newItem);
     }
   },
   actions: {
+    addToSchedule({ commit }, newItem) {
+      commit('addToSchedule', newItem);
+    }
   },
   modules: {
   },

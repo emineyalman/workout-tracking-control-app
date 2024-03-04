@@ -61,9 +61,47 @@
       "username": "em",
       "fullname": "em",
       "password": "4a3a263535e4b9405d9a0066a08a0190dada15c1"
+    },
+    {
+      "id": "1f63",
+      "first": "o",
+      "last": "o",
+      "email": "o",
+      "password": "5b64d775d68db87c549b4c0901915dcbba9a3b4c",
+      "terms": true
+    },
+    {
+      "id": "807d",
+      "first": "r",
+      "last": "r",
+      "email": "r",
+      "password": "7d84cb952c9b46859af4643e4bad8e5d8f7b91d7",
+      "terms": true
+    },
+    {
+      "id": "b759",
+      "first": "k",
+      "last": "k",
+      "email": "k",
+      "password": "deefc02f705675d0244a3afb9e7b9b25356177e4",
+      "terms": true
     }
   ],
-  "repetition": [
+  "repetitions": [
+    {
+      "id": 1,
+      "number": 1
+    },
+    {
+      "id": 2,
+      "number": 2
+    },
+    {
+      "id": 3,
+      "number": 3
+    }
+  ],
+  "apples": [
     {
       "id": 1,
       "number": 1
@@ -79,15 +117,538 @@
     {
       "id": 4,
       "number": 4
-    },
-
+    }
+  ],
+  "mices": [
     {
-      "id": 5,
-      "number": 5
+      "name": "Logitech G Pro X",
+      "color": "14, 151, 210",
+      "dpi": 16000,
+      "buttons": 8,
+      "weight": "63g",
+      "wireless": true,
+      "price": 149.99,
+      "description": "Logitech G Pro X",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/1.png",
+      "id": "1206"
     },
     {
-      "id": 6,
-      "number": 6
+      "name": "Razer DeathAdder V2",
+      "color": "12, 146, 47",
+      "dpi": 20000,
+      "buttons": 8,
+      "weight": "82g",
+      "wireless": false,
+      "price": 69.99,
+      "description": "Razer DeathAdder V2",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png",
+      "id": "ef39"
+    },
+    {
+      "name": "Corsair Dark Core RGB",
+      "color": "107, 187, 226",
+      "dpi": 18000,
+      "buttons": 9,
+      "weight": "133g",
+      "wireless": true,
+      "price": 89.99,
+      "description": "Corsair Dark Core RGB",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/3.png",
+      "id": "af63"
+    },
+    {
+      "name": "SteelSeries Rival 3",
+      "color": "228, 196, 69",
+      "dpi": 8500,
+      "buttons": 6,
+      "weight": "77g",
+      "wireless": false,
+      "price": 29.99,
+      "description": "SteelSeries Rival 3",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/4.png",
+      "id": "2316"
+    },
+    {
+      "name": "HyperX Pulsefire FPS Pro",
+      "color": "156, 82, 251",
+      "dpi": 16000,
+      "buttons": 6,
+      "weight": "95g",
+      "wireless": false,
+      "price": 44.99,
+      "description": "HyperX Pulsefire FPS Pro",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/5.png",
+      "id": "8d53"
+    },
+    {
+      "name": "Zowie EC2",
+      "color": "166, 39, 222",
+      "dpi": 3200,
+      "buttons": 5,
+      "weight": "90g",
+      "wireless": false,
+      "price": 69.99,
+      "description": "Zowie EC2",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/6.png",
+      "id": "3a3f"
+    },
+    {
+      "name": "Roccat Kone AIMO",
+      "color": "131, 9, 10",
+      "dpi": 16000,
+      "buttons": 10,
+      "weight": "130g",
+      "wireless": false,
+      "price": 79.99,
+      "description": "Roccat Kone AIMO",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/7.png",
+      "id": "acf4"
+    },
+    {
+      "name": "Logitech G903",
+      "color": "232, 94, 102",
+      "dpi": 12000,
+      "buttons": 11,
+      "weight": "110g",
+      "wireless": true,
+      "price": 129.99,
+      "description": "Logitech G903",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/8.png",
+      "id": "3a91"
+    },
+    {
+      "name": "Cooler Master MM711",
+      "color": "58, 192, 239",
+      "dpi": 16000,
+      "buttons": 6,
+      "weight": "60g",
+      "wireless": false,
+      "price": 49.99,
+      "description": "Cooler Master MM711",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/9.png",
+      "id": "5438"
+    },
+    {
+      "name": "Glorious Model O",
+      "color": "161, 252, 250",
+      "dpi": 12000,
+      "buttons": 6,
+      "weight": "67g",
+      "wireless": false,
+      "price": 49.99,
+      "description": "Glorious Model O",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/10.png",
+      "id": "313c"
+    },
+    {
+      "name": "HP Omen Photon",
+      "color": "201, 1, 2",
+      "dpi": 16000,
+      "buttons": 11,
+      "weight": "128g",
+      "wireless": true,
+      "price": 99.99,
+      "description": "HP Omen Photon",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/11.png",
+      "id": "8c04"
+    },
+    {
+      "name": "Asus ROG Chakram",
+      "color": "10, 181, 19",
+      "dpi": 16000,
+      "buttons": 9,
+      "weight": "121g",
+      "wireless": true,
+      "price": 159.99,
+      "description": "Asus ROG Chakram",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/12.png",
+      "id": "cce5"
+    },
+    {
+      "name": "Razer Naga X",
+      "color": "100, 101, 102",
+      "dpi": 16000,
+      "buttons": 16,
+      "weight": "85g",
+      "wireless": false,
+      "price": 79.99,
+      "description": "Razer Naga X",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/13.png",
+      "id": "2cb6"
+    },
+    {
+      "name": "Mad Catz R.A.T. 8+",
+      "color": "136, 241, 242",
+      "dpi": 16000,
+      "buttons": 11,
+      "weight": "145g",
+      "wireless": false,
+      "price": 99.99,
+      "description": "Mad Catz R.A.T. 8+",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/14.png",
+      "id": "49d1"
+    },
+    {
+      "name": "Alienware 610M",
+      "color": "109, 110, 114",
+      "dpi": 16000,
+      "buttons": 7,
+      "weight": "120g",
+      "wireless": true,
+      "price": 99.99,
+      "description": "Alienware 610M",
+      "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/15.png",
+      "id": "8e88"
+    }
+  ],
+  "schedule": [
+    {
+      "id": "f075",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "8f57",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Corsair Dark Core RGB",
+          "color": "107, 187, 226",
+          "dpi": 18000,
+          "buttons": 9,
+          "weight": "133g",
+          "wireless": true,
+          "price": 89.99,
+          "description": "Corsair Dark Core RGB",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/3.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "a1a8",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "264d",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "ea46",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Corsair Dark Core RGB",
+          "color": "107, 187, 226",
+          "dpi": 18000,
+          "buttons": 9,
+          "weight": "133g",
+          "wireless": true,
+          "price": 89.99,
+          "description": "Corsair Dark Core RGB",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/3.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "ebd0",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "8814",
+      "item": {
+        "type": "item",
+        "selectable": true,
+        "raw": {
+          "name": "Logitech G Pro X",
+          "color": "14, 151, 210",
+          "dpi": 16000,
+          "buttons": 8,
+          "weight": "63g",
+          "wireless": true,
+          "price": 149.99,
+          "description": "Logitech G Pro X",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/1.png"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "9973",
+      "option": 1
+    },
+    {
+      "id": "65a6",
+      "option": 1
+    },
+    {
+      "id": "d5c5",
+      "option": 1
+    },
+    {
+      "id": "e8d3",
+      "option": 1
+    },
+    {
+      "id": "1696",
+      "option": 2
+    },
+    {
+      "id": "5545",
+      "option": 1
+    },
+    {
+      "id": "246d",
+      "option": 2
+    },
+    {
+      "id": "578f",
+      "option": 1
+    },
+    {
+      "id": "20bc",
+      "option": 2
+    },
+    {
+      "id": "de05",
+      "option": 2
+    },
+    {
+      "id": "a89e",
+      "option": 2
+    },
+    {
+      "id": "cdb2",
+      "option": 2
+    },
+    {
+      "id": "a4e4",
+      "option": 1
+    },
+    {
+      "id": "0879",
+      "option": 1
+    },
+    {
+      "id": "a879",
+      "option": 2
+    },
+    {
+      "id": "c5ab",
+      "option": 1
+    },
+    {
+      "id": "58c9",
+      "option": 1
+    },
+    {
+      "id": "36d7",
+      "option": 1
+    },
+    {
+      "id": "86cc",
+      "item": {
+        "type": "item",
+        "value": "ef39",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png",
+          "id": "ef39"
+        }
+      },
+      "option": 2
+    },
+    {
+      "id": "d923",
+      "item": {
+        "type": "item",
+        "value": "ef39",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png",
+          "id": "ef39"
+        }
+      },
+      "option": 2
+    },
+    {
+      "id": "6519",
+      "item": {
+        "type": "item",
+        "value": "ef39",
+        "selectable": true,
+        "raw": {
+          "name": "Razer DeathAdder V2",
+          "color": "12, 146, 47",
+          "dpi": 20000,
+          "buttons": 8,
+          "weight": "82g",
+          "wireless": false,
+          "price": 69.99,
+          "description": "Razer DeathAdder V2",
+          "src": "https://cdn.vuetifyjs.com/docs/images/graphics/mice/2.png",
+          "id": "ef39"
+        }
+      },
+      "option": 1
+    },
+    {
+      "id": "28f0",
+      "option": 2
+    },
+    {
+      "id": "93ca",
+      "option": 1
+    },
+    {
+      "id": "c4ad",
+      "option": 1
+    },
+    {
+      "id": "a017",
+      "option": 2
+    },
+    {
+      "id": "0e10",
+      "option": 1
+    },
+    {
+      "id": "3798",
+      "option": 2
+    },
+    {
+      "id": "222e",
+      "option": 2
+    },
+    {
+      "id": "671f",
+      "option": 1
+    },
+    {
+      "id": "686e",
+      "option": 2
+    },
+    {
+      "id": "6251",
+      "option": 1
+    },
+    {
+      "id": "6376",
+      "option": 2
+    },
+    {
+      "id": "2a51",
+      "option": 1
+    },
+    {
+      "id": "b2dd",
+      "option": 2
+    },
+    {
+      "id": "97c4",
+      "option": 1
+    },
+    {
+      "id": "0b8e",
+      "option": 1
+    },
+    {
+      "id": "53c4",
+      "option": 1
+    },
+    {
+      "id": "331c",
+      "option": 1
+    },
+    {
+      "id": "fd86",
+      "option": 1
+    },
+    {
+      "id": "ad84",
+      "option": 1
+    },
+    {
+      "id": "e99e",
+      "option": 2
     }
   ]
 }

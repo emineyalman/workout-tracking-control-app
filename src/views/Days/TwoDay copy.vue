@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-card
-      v-for="repetition in repetitionList"
-      :key="repetition.id"
-      :value="repetition.id"
+      v-for="category in categoryList"
+      :key="category.id"
+      :value="category.id"
       class="mx-auto"
       max-width="344"
     >
@@ -14,27 +14,25 @@
       ></v-img>
 
       <v-card-title> Dumbbell Squat </v-card-title>
+
       <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
 
+      <!-- Set sayıları için input alanları -->
       <v-card-actions>
-        <select name="apples" id="apples">
-          <option
-            v-for="apple in appleList"
-            :key="apple.id"
-            :value="repetition.id"
-          >
-            {{ apple.number }}
-          </option>
-        </select>
-        <select name="apples" id="apples">
-          <option
-            v-for="apple in appleList"
-            :key="apple.id"
-            :value="repetition.id"
-          >
-            {{ apple.number }}
-          </option>
-        </select>
+        <v-select
+          v-model="daysList.selectedRepetition"
+          :items="repetitionOptions"
+          label="Repetition"
+          outlined
+          @change="updateSelectedSet"
+        ></v-select>
+        <v-select
+          v-model="daysList.selectedCount"
+          :items="countOptions"
+          label="Count"
+          outlined
+          @change="updateSelectedSet"
+        ></v-select>
       </v-card-actions>
 
       <div class="add-buttons">
@@ -70,8 +68,7 @@
 <script>
 export default {
   data: () => ({
-    appleList: [],
-    repetitionList: [],
+    categoryList: [],
     errorLoadingCategories: false,
     show: false,
     repetitionOptions: ["3", "4"], // Repetition seçenekleri
@@ -115,26 +112,22 @@ export default {
     },
   },
   mounted() {
-    Promise.all([
-      this.$appAxios.get("/repetitions"),
-      this.$appAxios.get("/apples"),
-    ])
-      .then(([repetition_response, apple_response]) => {
-        console.log("repetition_response :>> ", repetition_response);
-        console.log("apple_response :>> ", apple_response);
-        this.repetitionList = repetition_response?.data || [];
-        this.appleList = apple_response?.data || [];
+    this.$appAxios
+      .get("/repetition")
+      .then((category_response) => {
+        console.log("category_response :>> ", category_response);
+        this.categoryList = category_response?.data || [];
       })
       .catch((error) => {
-        console.error("Error loading data:", error);
-        // Hata durumunda gerekli işlemleri yapabilirsiniz
+        console.error("Error loading categories:", error);
+        this.errorLoadingCategories = true;
       });
   },
 };
 </script>
 
 
-<style lang="scss" scoped>
+<style scoped>
 .v-container {
   display: flex;
   flex-wrap: wrap;
@@ -148,16 +141,5 @@ export default {
   justify-content: center;
   margin-top: 20px;
   flex-direction: column;
-}
-select {
-  width: 40%;
-  background: #c696ce;
-  border-bottom: 2px solid;
-  border-radius: 10px;
-  height: 40px;
-
-  option {
-    text-align: center;
-  }
 }
 </style>

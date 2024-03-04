@@ -1,6 +1,12 @@
 <template>
   <v-container>
-    <v-card v-for="n in 9" :key="n" class="mx-auto" max-width="344">
+    <v-card
+      v-for="repetition in repetitionList"
+      :key="repetition.id"
+      :value="repetition.id"
+      class="mx-auto"
+      max-width="344"
+    >
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
         height="200px"
@@ -8,29 +14,37 @@
       ></v-img>
 
       <v-card-title> Dumbbell Squat </v-card-title>
-
       <v-card-subtitle> 1,000 miles of wonder </v-card-subtitle>
 
-      <!-- Set sayıları için input alanları -->
       <v-card-actions>
-        <v-select
-          v-model="selectedRepetition"
-          :items="repetitionOptions"
-          label="Repetition"
-          outlined
-          @change="updateSelectedSet"
-        ></v-select>
-        <v-select
-          v-model="selectedCount"
-          :items="countOptions"
-          label="Count"
-          outlined
-          @change="updateSelectedSet"
-        ></v-select>
+        <select name="apples" id="apples">
+          <option
+            v-for="apple in appleList"
+            :key="apple.id"
+            :value="repetition.id"
+          >
+            {{ apple.number }}
+          </option>
+        </select>
+        <select name="apples" id="apples">
+          <option
+            v-for="apple in appleList"
+            :key="apple.id"
+            :value="repetition.id"
+          >
+            {{ apple.number }}
+          </option>
+        </select>
       </v-card-actions>
 
-      <v-btn @click="onOneday">1.Güne Ekle </v-btn><v-btn> 2.Güne Ekle</v-btn>
-
+      <div class="add-buttons">
+        <v-btn color="purple" @click="addToSchedule(item, 1)"
+          >1.Güne Ekle</v-btn
+        >
+        <v-btn color="yellow" @click="addToSchedule(item, 2)"
+          >2.Güne Ekle</v-btn
+        >
+      </div>
       <v-card-actions>
         <v-btn color="orange-lighten-2" variant="text"> Explore </v-btn>
 
@@ -46,32 +60,26 @@
         <div v-show="show">
           <v-divider></v-divider>
 
-          <v-card-text>
-            I'm a thing. But, like most politicians, he promised more than he
-            could deliver. You won't have time for sleeping, soldier, not with
-            all the bed making you'll be doing. Then we'll go with that data
-            file! Hey, you add a one and two zeros to that or we walk! You're
-            going to do his laundry? I've got to find a way to escape.
-          </v-card-text>
+          <v-card-text> I'm a thing... </v-card-text>
         </div>
       </v-expand-transition>
     </v-card>
-
-    <v-col class="btn-days"> </v-col>
   </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
-    categoryList: [],
+    appleList: [],
+    repetitionList: [],
     errorLoadingCategories: false,
-
     show: false,
     repetitionOptions: ["3", "4"], // Repetition seçenekleri
     countOptions: Array.from({ length: 10 }, (_, i) => String(i + 1)), // Count seçenekleri (1'den 10'a kadar)
-    selectedRepetition: null,
-    selectedCount: null,
+    daysList: {
+      selectedRepetition: null,
+      selectedCount: null,
+    },
   }),
   computed: {
     displayedCounts() {
@@ -91,27 +99,42 @@ export default {
       // Burada butona tıklandığında yapılması gereken işlemleri ekleyebilirsiniz
       console.log("Tıklandı:", count);
     },
-    onOneday() {
-      alert();
+
+    addToSchedule(item, option) {
+      // Burada seçilen öğenin verisini kullanarak Axios ile bir istek gönderin
+      this.$appAxios
+        .post("/schedule", {
+          item: item,
+          option: option,
+        })
+        .then((response) => {
+          // İstek başarılı olduğunda yapılacak işlemler
+          console.log("response :>> ", response);
+          this.categoryList = response?.data || [];
+        });
     },
   },
   mounted() {
-    this.$appAxios
-      .get("/repetition")
-      .then((category_response) => {
-        console.log("category_response :>> ", category_response);
-        this.categoryList = category_response?.data || [];
+    Promise.all([
+      this.$appAxios.get("/repetitions"),
+      this.$appAxios.get("/apples"),
+    ])
+      .then(([repetition_response, apple_response]) => {
+        console.log("repetition_response :>> ", repetition_response);
+        console.log("apple_response :>> ", apple_response);
+        this.repetitionList = repetition_response?.data || [];
+        this.appleList = apple_response?.data || [];
       })
       .catch((error) => {
-        console.error("Error loading categories:", error);
-        this.errorLoadingCategories = true;
+        console.error("Error loading data:", error);
+        // Hata durumunda gerekli işlemleri yapabilirsiniz
       });
   },
 };
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .v-container {
   display: flex;
   flex-wrap: wrap;
@@ -125,5 +148,16 @@ export default {
   justify-content: center;
   margin-top: 20px;
   flex-direction: column;
+}
+select {
+  width: 40%;
+  background: #c696ce;
+  border-bottom: 2px solid;
+  border-radius: 10px;
+  height: 40px;
+
+  option {
+    text-align: center;
+  }
 }
 </style>
